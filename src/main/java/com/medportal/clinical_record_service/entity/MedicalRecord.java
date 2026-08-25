@@ -1,4 +1,4 @@
-package com.medportal.clinical_record_service.model;
+package com.medportal.clinical_record_service.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,11 +16,21 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MedicalRecord {
+
     @Id
-    private String id;
+    private String id; // MongoDB uses String (ObjectId) for Auto-ID
+
     private Long patientId;
     private Long doctorId;
-    private String diagnosis;
-    private List<String> prescriptions;
+    private Long appointmentId;
+
+    private String primaryDiagnosis;
+    private String icdCode;
+    private String severity;
+
+    private List<String> symptoms;
+    private String clinicalNotes;
     private LocalDateTime recordDate;
+
+    private List<Prescription> prescriptions; // Embedded inner document list
 }

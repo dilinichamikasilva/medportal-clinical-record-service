@@ -1,6 +1,6 @@
 package com.medportal.clinical_record_service.repository;
 
-import com.medportal.clinical_record_service.model.MedicalRecord;
+import com.medportal.clinical_record_service.entity.MedicalRecord;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
