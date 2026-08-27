@@ -26,3 +26,23 @@ The **Clinical Record Service** is a core microservice of the MedPortal Enterpri
    ```bash
    git clone https://github.com/dilinichamikasilva/medportal-clinical-record-service.git
    ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd medportal-clinical-record-service
+   ```
+
+3. Grant execution permission to Maven wrapper:
+   ```bash
+   chmod +x mvnw
+   ```
+
+4. Build the project:
+   ```bash
+   ./mvnw clean package -DskipTests
+   ```
+
+5. Run the service using PM2 or Java:
+   ```bash
+   pm2 start java --name "clinical-record-service" -- -jar target/*.jar
+   ```
